@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="ex1"></div>
+    <div id="ex2"></div>
+    <!-- <div class="post-item"> 
+        <h2 title="Hoc React">Hoc ReactJS</h2>
+        <p>Hoc React tu co ban toi nang cao</p>
+    </div>-->
+    <div id="ex3"></div>
+    <script type="text/babel">
+        const divReact = React.createElement(
+            'div', { className: 'post-item' },
+            React.createElement('h2', { className: 'Hoc React' }, 'Hoc React'),
+            React.createElement('p', {}, 'Hoc React tu co ban toi nang cao')
+        );
+
+        const ex3 = document.getElementById('ex3');
+
+        ReactDOM.render(divReact, ex3);
+
+        const h1Dom = React.createElement(
+            'h1',
+            {
+                title: 'Hello',
+                className: 'heading',
+            },
+            'Hello guys!'
+        )
+
+        const ex1 = document.getElementById('ex1');
+
+        ReactDOM.render(h1Dom, ex1);
+
+        const ulDom = React.createElement(
+            'ul',
+            {
+                style: {"color": "red"},
+            },
+            React.createElement('li', {}, 'JavaScript'),
+            React.createElement('li', {}, 'ReactJS'),
+        );
+
+        const ex2 = document.getElementById('ex2');
+
+        // React @17
+        // ReactDOM.render(ulDom, ex2);
+
+        // React @18
+        const root = ReactDOM.createRoot(ex2);
+        root.render(ulDom)
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <h1 title="Hello" class="Heading">Hello guys!</h1> -->
+    <div id="ex1"></div>
+
+    <!-- <ul>
+        <li>Javascript</li>
+        <li>ReactJS</li>
+    </ul> -->
+    <div id="ex2"></div>
+
+    <!-- <div class="post-item"> 
+        <h2 title="Hoc React">Hoc ReactJS</h2>
+        <p>Hoc React tu co ban toi nang cao</p>
+    </div>-->
+    <div id="ex3"></div>
+    <script>
+        const h1Dom = document.createElement('h1');
+        h1Dom.title = 'Hello';
+        h1Dom.className = 'Heading';
+        h1Dom.innerText = 'Hello guys!';
+
+        document.getElementById('ex1').appendChild(h1Dom);
+
+        // const h1React = React.createElement('h1', {
+        //     title: 'Hello',
+        //     className: 'Heading',
+        // }, 'Hello guys!');
+
+        // const ulDom = document.createElement('ul');
+        // const li1Dom = document.createElement('li');
+        // li1Dom.innerText('JavaScript');
+        // const li2Dom = document.createElement('li');
+        // li2Dom.innerText('ReactJS');
+
+        // ulDom.appendChild(li1Dom);
+        // ulDom.appendChild(li2Dom);
+
+        // document.getElementById('ex2').appendChild(ulDom);
+
+        // const ulReact = React.createElement(
+        //     'ul',
+        //     null,
+        //     React.createElement('li', null, 'JavaScript'), 
+        //     React.createElement('li', null, 'ReactJS')
+        // );
+
+        const divDom = document.createElement('div');
+        divDom.className = 'post-item';
+        const h2Dom = document.createElement('h2');
+        h2Dom.className = 'Hoc React';
+        h2Dom.innerText = 'Hoc ReactJS';
+
+        const pDom = document.createElement('p');
+        pDom.innerText = 'Hoc React tu co ban toi nang cao';
+
+        divDom.appendChild(h2Dom);
+        divDom.appendChild(pDom);
+
+        document.getElementById('ex3').appendChild(divDom);
+
+        const divReact = React.createElement(
+            'div', { className: 'post-item' },
+            React.createElement('h2', { className: 'Hoc React' }, 'Hoc React'),
+            React.createElement('p', null, 'Hoc React tu co ban toi nang cao')
+        );
+    </script>
+</body>
+
+</html>
